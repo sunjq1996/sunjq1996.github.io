@@ -158,14 +158,17 @@ export default {
       query.set('m_s_email', this.message.email)
       query.set('m_s_content', this.message.content)
       query.save().then(res => {
+        this.message.name = ''
+        this.message.email = ''
+        this.message.content = ''
         this.message.res = 'Success, thank you!'
-        SetDelayTime(2000).then(() => {
+        SetDelayTime(5000).then(() => {
           this.message.res = ''
         })
         console.log('res: ', res)
       }).catch(err => {
         this.message.res = 'Failed, sorry!'
-        SetDelayTime(2000).then(() => {
+        SetDelayTime(5000).then(() => {
           this.message.res = ''
         })
         console.error('err: ', err)
