@@ -5,7 +5,7 @@
             <!--/banner-->
             <div class="banner-info">
                 <div class="w3pvt-logo text-center">
-                    <h1> <a href="index.html">Jackie's island</a></h1>
+                    <h1>Jackie's island</h1>
                 </div>
                 <div class="middile-inner-con">
                     <div class="tab-main mx-auto">
