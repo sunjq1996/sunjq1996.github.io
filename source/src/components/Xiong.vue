@@ -36,12 +36,12 @@ export default {
           require('../assets/images/xiong6.png')
         ],
         pathsin: [
-          require('../assets/images/sun4.png'),
           require('../assets/images/xiong1.png'),
-          require('../assets/images/sun5.png'),
+          require('../assets/images/sun4.png'),
           require('../assets/images/xiong2.png'),
-          require('../assets/images/sun6.png'),
-          require('../assets/images/xiong3.png')
+          require('../assets/images/sun5.png'),
+          require('../assets/images/xiong3.png'),
+          require('../assets/images/sun6.png')
         ]
       },
 
