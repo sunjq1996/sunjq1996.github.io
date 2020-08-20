@@ -31,7 +31,7 @@
                             <h3 class="head-w3ls">Have fun here with key4u</h3>
                             <div class="row news-grids text-center">
                                 <div class="col-4 gal-img">
-                                    <a href="#gal1"><img src="../assets/images/g1.jpg" alt="news image" class="img-fluid"></a>
+                                    <img @click="Nav2ProjectXiong" src="../assets/images/g1.jpg" alt="news image" class="img-fluid">
                                     <a href="#gal2"><img src="../assets/images/g3.jpg" alt="news image" class="img-fluid"></a>
                                 </div>
                                 <div class="col-4 gal-img">
@@ -173,6 +173,10 @@ export default {
         })
         console.error('err: ', err)
       })
+    },
+
+    Nav2ProjectXiong: function () {
+      this.$router.push({ name: 'Xiong', params: { key: 'sphinx' } })
     }
   }
 }
