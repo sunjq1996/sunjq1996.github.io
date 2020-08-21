@@ -176,6 +176,7 @@ export default {
     },
 
     Nav2ProjectXiong: function () {
+      // this.$router.push({ name: 'Barrage' })
       this.$router.push({ name: 'Xiong', params: { key: 'sphinx' } })
     }
   }

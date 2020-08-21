@@ -32,7 +32,7 @@
 	margin: 0 auto;
 	transform-style: preserve-3d;
 	transform: rotateX(-30deg) rotateY(-80deg);
-	-webkit-animation: rotate 20s infinite;
+	-webkit-animation: rotate 10s infinite;
 	/*‘»ÀŸ*/
 	animation-timing-function: linear;
 }

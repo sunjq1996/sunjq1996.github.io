@@ -6,12 +6,15 @@ import App from './App'
 import $ from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
+import { vueBaberrage } from 'vue-baberrage'
 import router from './router'
 import Bmob from 'hydrogen-js-sdk'
 Bmob.initialize('618651b9bdb77d9e', 'sphinx')
 
 Vue.config.productionTip = false
 Vue.prototype.Bmob = Bmob
+
+Vue.use(vueBaberrage)
 
 /* eslint-disable no-new */
 new Vue({
