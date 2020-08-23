@@ -9,10 +9,9 @@ import note from '@/components/note.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     { // 首页
-      path: '/home',
+      path: '/',
       name: 'home',
       component: home
     },
