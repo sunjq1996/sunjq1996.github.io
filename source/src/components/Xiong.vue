@@ -1,7 +1,11 @@
 <template>
   <div class="banner">
     <!--/banner-->
-    <div class="banner-info p-0">
+    <div class="alert alert-warning" v-if="!keyVerified">
+      <a href="#" class="close" data-dismiss="alert">&times;</a>
+      <strong>Sorry, Your Have Submitted a Wrong Key!</strong>
+    </div>
+    <div class="banner-info p-0" v-else>
       <div class="middile-inner-con">
         <div class="tab-main mx-auto">
           <label class="bg-transparent border-0" v-for="(item, index) in nav" v-bind:key="'nav'+index" @click="NavClick(item.name)">
@@ -10,8 +14,7 @@
         </div>
       </div>
     </div>
-
-    <video id="video" :src="songs.list[songs.idx].path" @ended="SongsSwitcher" hidden="hidden" controls="controls" autoplay="autoplay" :loop="false"> </video>
+    <video id="video" :src="songs.list[songs.idx].path" @ended="SongsSwitcher" hidden="hidden" controls="controls" :autoplay="keyVerified" :loop="false"> </video>
     <!--/*外层最大容器*/-->
     <div class="wrap" v-show="cube.isVisible">
       <!-- 包裹所有元素的容器 -->
@@ -27,18 +30,20 @@
       </div>
     </div>
     <div @click="BarrageClose">
-      <Barrage :visible="barrage.isVisible"></Barrage>
+      <barrage :visible="barrage.isVisible"></barrage>
     </div>
   </div>
 </template>
 
 <script>
-import Barrage from './Barrage.vue'
+import barrage from './barrage.vue'
 export default {
-  name: 'Xiong',
-  components: { Barrage },
+  name: 'xiong',
+  components: { barrage },
   data () {
     return {
+      key: 'sphinx',
+      keyVerified: false,
       nav: [
         {
           name: 'music',
@@ -100,6 +105,15 @@ export default {
       }
     }
   },
+
+  beforeMount: function () {
+    var key = this.$route.query.key
+    if (key === this.key) {
+      this.keyVerified = true
+    }
+    console.log(this.keyVerified)
+  },
+
   methods: {
     // 自动播放下一首歌
     SongsSwitcher: function () {

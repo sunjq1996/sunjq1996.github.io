@@ -1,33 +1,30 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Home from '@/components/Home'
-import Xiong from '@/components/Xiong.vue'
-import Barrage from '@/components/Barrage.vue'
+
+// 引入组件页面
+import home from '@/components/home'
+import xiong from '@/components/xiong.vue'
+import note from '@/components/note.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
+    { // 首页
+      path: '/home',
+      name: 'home',
+      component: home
     },
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+    { // project-xiong
+      path: '/xiong',
+      name: 'xiong',
+      component: xiong
     },
-    {
-      path: '/',
-      name: 'Xiong',
-      component: Xiong
-    },
-    {
-      path: '/',
-      name: 'Barrage',
-      component: Barrage
+    { // project-note
+      path: '/note',
+      name: 'note',
+      component: note
     }
   ]
 })

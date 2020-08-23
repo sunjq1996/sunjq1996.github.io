@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Barrage',
+  name: 'barrage',
   props: ['visible'],
   // 数据
   data () {

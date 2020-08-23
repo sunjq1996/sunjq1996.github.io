@@ -5,7 +5,7 @@ import App from './App'
 // eslint-disable-next-line
 import $ from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import { vueBaberrage } from 'vue-baberrage'
 import router from './router'
 import Bmob from 'hydrogen-js-sdk'
