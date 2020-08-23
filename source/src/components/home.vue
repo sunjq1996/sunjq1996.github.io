@@ -203,16 +203,17 @@ export default {
 
     // 打开工程note
     Nav2ProjectNote: function () {
-      this.$router.push({
-        name: 'note',
-        params: {
-          key: 'sphinx'
-        }
-      })
+      this.modal.path = '/note'
+      // eslint-disable-next-line
+      $('#modal-key').modal('show')
     },
     // 模态框确认
     ModalConfirm: function () {
       console.log('key: ', this.modal.key)
+      if (this.modal.key === '') {
+        console.error('Invalid input of key, empty is not allowed')
+        return false
+      }
       // eslint-disable-next-line
       // $('#modal-key').modal('hide') // 隐藏模态框
       this.$router.push({ path: this.modal.path, query: { key: this.modal.key } })
