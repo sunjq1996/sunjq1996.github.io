@@ -35,19 +35,19 @@ export default {
           this.barrage.list.push({
             id: ii.toString(),
             avatar: require('../assets/images/avatar0.jpg'),
-            msg: res1[ii].b_r_text,
+            msg: res1[ii].b_r_text + ' [' + res1[ii].createdAt + ']',
             time: Math.round(Math.random() * 10 + 5)
           })
         }
 
-        // 查询Xiong表
+        // 查询Fss表
         query2.find().then(res2 => {
           // console.log('res: ', res) // 获取弹幕查询结果
           for (var ii = 0; ii < res2.length; ii++) { // 插入到弹幕显示组
             this.barrage.list.push({
               id: (res1.length + ii).toString(),
               avatar: require('../assets/images/avatar1.jpg'),
-              msg: res2[ii].m_s_content,
+              msg: res2[ii].m_s_content + ' [' + res2[ii].createdAt + ']',
               time: Math.round(Math.random() * 10 + 5)
             })
           }

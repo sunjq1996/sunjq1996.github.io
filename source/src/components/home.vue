@@ -28,8 +28,8 @@
               <p>It's a place for me to keep my thoughts and works.</p>
             </section>
             <section id="content3" class="inner-w3layouts-wrap">
-              <h3 class="head-w3ls">Have fun here with key4u</h3>
-              <div class="row news-grids text-center">
+              <h3 class="head-w3ls" @click="Nav2ProjectFss">CLICK ME</h3>
+              <!--div class="row news-grids text-center">
                 <div class="col-4 gal-img">
                   <img @click="Nav2ProjectXiong" :src="projects[0].icon" alt="news image" class="img-fluid" />
                   <img @click="Nav2ProjectNote" :src="projects[1].icon" alt="news image" class="img-fluid" />
@@ -42,8 +42,7 @@
                   <img :src="projects[4].icon" alt="news image" class="img-fluid" />
                   <img :src="projects[5].icon" alt="news image" class="img-fluid" />
                 </div>
-                <!-- popup-->
-              </div>
+              </div-->
             </section>
             <section id="content4" class="inner-w3layouts-wrap">
               <h3 class="head-w3ls">welcome to message me</h3>
@@ -74,7 +73,7 @@
               </form>
               <h4> {{ message.res }} </h4>
               <!-- 暂不开放其他联系方式 -->
-              <ul class="w3pvt_social_list list-unstyled mt-4">
+              <!--ul class="w3pvt_social_list list-unstyled mt-4">
                   <li>
                       <a href="#" class="w3layouts-icon"><span class="fa fa-weibo"></span></a>
                   </li>
@@ -87,7 +86,7 @@
                   <li>
                       <a href="#" class="w3layouts-icon"><span class="fa fa-google-plus"></span></a>
                   </li>
-              </ul>
+              </ul-->
             </section>
           </div>
           <!--// banner-inner -->
@@ -102,18 +101,18 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header m-auto border-0">
-              <h4 class="modal-title">Input Your Key</h4>
+              <h4 class="modal-title">your name initials ?</h4>
             </div>
             <div class="modal-body">
               <form role="form">
                 <div class="form-group">
-                  <input v-model="modal.key" type="text" class="form-control" id="modal-input" placeholder="Please input your key">
+                  <input v-model="modal.key" type="text" class="form-control" id="modal-input" placeholder="in lower case">
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal" @click="ModalConfirm">Confirm</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Bye~</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" @click="ModalConfirm">OK!</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -195,8 +194,8 @@ export default {
     },
 
     // 打开工程xiong
-    Nav2ProjectXiong: function () {
-      this.modal.path = '/xiong'
+    Nav2ProjectFss: function () {
+      this.modal.path = '/fss'
       // eslint-disable-next-line
       $('#modal-key').modal('show')
     },

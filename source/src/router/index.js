@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 // 引入组件页面
 import home from '@/components/home'
-import xiong from '@/components/xiong.vue'
+import fss from '@/components/fss.vue'
 import note from '@/components/note.vue'
 
 Vue.use(Router)
@@ -15,10 +15,10 @@ export default new Router({
       name: 'home',
       component: home
     },
-    { // project-xiong
-      path: '/xiong',
-      name: 'xiong',
-      component: xiong
+    { // project-fss
+      path: '/fss',
+      name: 'fss',
+      component: fss
     },
     { // project-note
       path: '/note',

@@ -3,7 +3,7 @@
     <!--/banner-->
     <div class="alert alert-warning" v-if="!keyVerified">
       <a href="#" class="close" data-dismiss="alert">&times;</a>
-      <strong>Sorry, Your Have Submitted a Wrong Key!</strong>
+      <strong>Sorry, Permission Denied!</strong>
     </div>
     <div class="banner-info p-0" v-else>
       <div class="middile-inner-con">
@@ -38,11 +38,11 @@
 <script>
 import barrage from './barrage.vue'
 export default {
-  name: 'xiong',
+  name: 'fss',
   components: { barrage },
   data () {
     return {
-      key: 'sphinx',
+      key: 'fss',
       keyVerified: false,
       nav: [
         {
@@ -69,18 +69,18 @@ export default {
         cssspans: ['front', 'back', 'left', 'right', 'top', 'bottom'],
         pathsout: [
           require('../assets/images/sun1.png'),
-          require('../assets/images/xiong4.png'),
+          require('../assets/images/fss4.jpg'),
           require('../assets/images/sun2.png'),
-          require('../assets/images/xiong5.png'),
+          require('../assets/images/fss5.jpg'),
           require('../assets/images/sun3.png'),
-          require('../assets/images/xiong6.png')
+          require('../assets/images/fss6.jpg')
         ],
         pathsin: [
-          require('../assets/images/xiong1.png'),
+          require('../assets/images/fss1.jpg'),
           require('../assets/images/sun4.png'),
-          require('../assets/images/xiong2.png'),
+          require('../assets/images/fss2.jpg'),
           require('../assets/images/sun5.png'),
-          require('../assets/images/xiong3.png'),
+          require('../assets/images/fss3.jpg'),
           require('../assets/images/sun6.png')
         ]
       },
@@ -142,5 +142,5 @@ export default {
 </script>
 
 <style>
-  @import url("../assets/css/xiong.css");
+  @import url("../assets/css/fss.css");
 </style>
