@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="cursor"></div>
     <!-- mian-content -->
     <div class="main-banner" id="home">
       <!--/banner-->
@@ -123,6 +124,9 @@
 </template>
 
 <script>
+import { cursorMove } from 'ufo-cursor'
+import 'ufo-cursor/ufocursor.css'
+
 import {
   SetDelayTime
 } from '../assets/js/util.js'
@@ -167,6 +171,11 @@ export default {
       }
     }
   },
+
+  mounted () {
+    cursorMove()
+  },
+
   methods: {
     // 新增内容到留言箱
     SendMessage2Me: function () {
