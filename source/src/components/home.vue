@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="cursor"></div>
     <!-- mian-content -->
     <div class="main-banner" id="home">
       <!--/banner-->
@@ -124,8 +123,6 @@
 </template>
 
 <script>
-import { cursorMove } from 'ufo-cursor'
-import 'ufo-cursor/ufocursor.css'
 
 import {
   SetDelayTime
@@ -170,10 +167,6 @@ export default {
         res: ''
       }
     }
-  },
-
-  mounted () {
-    cursorMove()
   },
 
   methods: {

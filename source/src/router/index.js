@@ -12,12 +12,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     { // project-ufo
-      path: '/',
+      path: '/ufo',
       name: 'ufo',
       component: ufo
     },
     { // 首页
-      path: '/home',
+      path: '/',
       name: 'home',
       component: home
     },
