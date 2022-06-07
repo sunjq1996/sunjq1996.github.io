@@ -226,6 +226,6 @@ export default {
 <style>
   @import url("../assets/css/style.css");
   @import url("../assets/css/font-awesome.css");
-  /* @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"); */
-  /* @import url("http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"); */
+  @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900");
+  @import url("http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
 </style>
