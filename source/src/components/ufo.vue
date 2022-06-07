@@ -48,7 +48,7 @@ export default {
   }
 
   #island {
-    width: 45vw;
+    width: 30vw;
     height: auto;
   }
 </style>
