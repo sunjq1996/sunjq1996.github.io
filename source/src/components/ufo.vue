@@ -1,5 +1,7 @@
 <template>
   <div style='width:100vw;height: 100vh;'>
+    <!-- <video id="video" :src="path" hidden="hidden" controls="controls" autoplay loop> </video> -->
+    <video id="video" :src="path" hidden="hidden" controls="controls" autoplay loop> </video>
     <night-sky id='nightSky' layers='3' density='146' velocity='122' starcolor='#ffffff' />
 
     <div id='content'>
@@ -20,6 +22,12 @@ import '@h0rn0chse/night-sky/dist/bundle.min.js'
 
 export default {
   name: 'ufo',
+
+  data () {
+    return {
+      path: require('../assets/songs/天空之城-宫崎骏.mp3')
+    }
+  },
 
   mounted () {
     cursorMove()
